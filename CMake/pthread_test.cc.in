@@ -1,0 +1,7 @@
+// Copied from https://github.com/OpenChemistry/protobuf/blob/master/src/CMake/pthread_test.cc.in
+#include <pthread.h>
+int main ()
+{
+ int attr = @PTHREAD_TEST@; return attr;
+ return 0;
+}
