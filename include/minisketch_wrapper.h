@@ -7,8 +7,8 @@
 #endif
 
 #include <memory>
-#include <vector>
 #include <stdexcept>
+#include <vector>
 
 #if __cplusplus == 201703L
 #define USE_CXX17
@@ -31,6 +31,97 @@ struct MiniSketchDeleter { // deleter
     minisketch_destroy(sketch);
   };
 };
+
+namespace minisketch_wrapper {
+struct MiniSketch {
+  using element_t = uint32_t;
+  using ustring_t = std::basic_string<unsigned char>;
+
+  // create an empty minisketch
+  MiniSketch(unsigned m, unsigned t)
+      : m_(m), t_(t), sketch_(minisketch_create(m, MINI_SKETCH_IMPL, t),
+                              MiniSketchDeleter()) {}
+
+  static MiniSketch deserialize_from(unsigned m, unsigned t,
+                                     const ustring_t &buffer) {
+    std::unique_ptr<minisketch, MiniSketchDeleter> sketch(
+        minisketch_create(m, MINI_SKETCH_IMPL, t), MiniSketchDeleter());
+    minisketch_deserialize(sketch.get(), &buffer[0]);
+    return MiniSketch(m, t, std::move(sketch));
+  }
+
+  size_t num_bits() const { return m_; }
+  size_t capacity() const { return t_; }
+
+  // preferred
+  MiniSketch &operator^=(const MiniSketch &other) { return merge_with(other); }
+
+  MiniSketch operator^(const MiniSketch &other) {
+    std::unique_ptr<minisketch, MiniSketchDeleter> merged(
+        minisketch_clone(sketch_.get()));
+    minisketch_merge(merged.get(), other.get_sketch().get());
+    return MiniSketch(m_, t_, std::move(merged));
+  }
+
+  MiniSketch &merge_with(const MiniSketch &other) {
+    minisketch_merge(sketch_.get(), other.get_sketch().get());
+    return *this;
+  }
+
+  const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch() const {
+    return sketch_;
+  }
+
+  ustring_t serialize() const {
+    size_t sersize = minisketch_serialized_size(sketch_.get());
+    assert(sersize == m_ * t_ / 8);
+    ustring_t buffer(sersize, '\0');
+    minisketch_serialize(sketch_.get(), &buffer[0]);
+    return buffer;
+  }
+
+  void add(element_t s) { minisketch_add_uint64(sketch_.get(), s); }
+
+  void encode(const std::vector<element_t> &S) {
+    for (auto s : S) {
+      add(s);
+    }
+  }
+
+#ifdef USE_CXX17
+  std::optional<std::vector<uint64_t>> decode() {
+#else
+  std::vector<uint64_t> decode() {
+#endif
+    std::vector<uint64_t> differences(t_, 0);
+    ssize_t num_differences =
+        minisketch_decode(sketch_.get(), t_, &differences[0]);
+    if (num_differences < 0) {
+#ifdef USE_CXX17
+      return std::nullopt;
+#else
+      throw std::runtime_error("Unable to decode");
+#endif
+    }
+    if (num_differences < t_) {
+      differences.erase(differences.begin() + num_differences,
+                        differences.end());
+    }
+    return differences;
+  }
+
+protected:
+  MiniSketch(unsigned m, unsigned t,
+             std::unique_ptr<minisketch, MiniSketchDeleter> init)
+      : m_(m), t_(t), sketch_(std::move(init)) {}
+
+private:
+  unsigned m_; // # of bits
+  unsigned t_; // capacity
+
+  std::unique_ptr<minisketch, MiniSketchDeleter> sketch_;
+};
+} // namespace minisketch_wrapper
 
 struct MiniSketch {
   using element_t = uint32_t;
