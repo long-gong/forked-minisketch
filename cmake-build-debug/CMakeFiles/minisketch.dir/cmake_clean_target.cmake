@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "minisketch.lib"
+  "libminisketch.a"
 )

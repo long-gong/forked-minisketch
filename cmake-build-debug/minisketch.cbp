@@ -4,186 +4,202 @@
 	<Project>
 		<Option title="minisketch"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="minisketch">
-				<Option output="D:/GitHub/minisketch/cmake-build-debug/minisketch.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add option="-DPACKAGE_NAME=&quot;minisketch&quot;"/>
-					<Add option="-DPACKAGE_TARNAME=&quot;minisketch&quot;"/>
-					<Add option="-DPACKAGE_VERSION=&quot;0.0.1&quot;"/>
-					<Add option="-DPACKAGE_STRING=&quot;minisketch 0.0.1&quot;"/>
-					<Add option="-DPACKAGE_BUGREPORT=&quot;http://github.com/sipa/minisketch/&quot;"/>
-					<Add option="-DPACKAGE_URL=&quot;&quot;"/>
-					<Add option="-DPACKAGE=&quot;minisketch&quot;"/>
-					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
-					<Add directory="D:/GitHub/minisketch"/>
-					<Add directory="D:/GitHub/minisketch/include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 minisketch"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="minisketch/fast">
-				<Option output="D:/GitHub/minisketch/cmake-build-debug/minisketch.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add option="-DPACKAGE_NAME=&quot;minisketch&quot;"/>
-					<Add option="-DPACKAGE_TARNAME=&quot;minisketch&quot;"/>
-					<Add option="-DPACKAGE_VERSION=&quot;0.0.1&quot;"/>
-					<Add option="-DPACKAGE_STRING=&quot;minisketch 0.0.1&quot;"/>
-					<Add option="-DPACKAGE_BUGREPORT=&quot;http://github.com/sipa/minisketch/&quot;"/>
-					<Add option="-DPACKAGE_URL=&quot;&quot;"/>
-					<Add option="-DPACKAGE=&quot;minisketch&quot;"/>
-					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
-					<Add directory="D:/GitHub/minisketch"/>
-					<Add directory="D:/GitHub/minisketch/include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 minisketch/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
+			<Target title="install/strip">
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 install/local"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 install"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minisketch">
+				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-debug/libminisketch.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPACKAGE_NAME=&quot;minisketch&quot;"/>
+					<Add option="-DPACKAGE_TARNAME=&quot;minisketch&quot;"/>
+					<Add option="-DPACKAGE_VERSION=&quot;0.0.1&quot;"/>
+					<Add option="-DPACKAGE_STRING=&quot;minisketch 0.0.1&quot;"/>
+					<Add option="-DPACKAGE_BUGREPORT=&quot;http://github.com/sipa/minisketch/&quot;"/>
+					<Add option="-DPACKAGE_URL=&quot;&quot;"/>
+					<Add option="-DPACKAGE=&quot;minisketch&quot;"/>
+					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
+					<Add option="-DSTDC_HEADERS=1"/>
+					<Add option="-DHAVE_CXX11=1"/>
+					<Add directory="/home/saber/GitHub/forked-minisketch"/>
+					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 minisketch"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minisketch/fast">
+				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-debug/libminisketch.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DPACKAGE_NAME=&quot;minisketch&quot;"/>
+					<Add option="-DPACKAGE_TARNAME=&quot;minisketch&quot;"/>
+					<Add option="-DPACKAGE_VERSION=&quot;0.0.1&quot;"/>
+					<Add option="-DPACKAGE_STRING=&quot;minisketch 0.0.1&quot;"/>
+					<Add option="-DPACKAGE_BUGREPORT=&quot;http://github.com/sipa/minisketch/&quot;"/>
+					<Add option="-DPACKAGE_URL=&quot;&quot;"/>
+					<Add option="-DPACKAGE=&quot;minisketch&quot;"/>
+					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
+					<Add option="-DSTDC_HEADERS=1"/>
+					<Add option="-DHAVE_CXX11=1"/>
+					<Add directory="/home/saber/GitHub/forked-minisketch"/>
+					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 minisketch/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="D:/GitHub/minisketch/cmake-build-debug"/>
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 list_install_components"/>
-					<CompileFile command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\GitHub\minisketch\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_1byte.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_1byte.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_2bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_2bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_3bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_3bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_4bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_4bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_5bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_5bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_6bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_6bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_7bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_7bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/clmul_8bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_8bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_1byte.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_1byte.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_2bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_2bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_3bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_3bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_4bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_4bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_5bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_5bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_6bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_6bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_7bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_7bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/fields/generic_8bytes.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_8bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/src/minisketch.cpp">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/src/minisketch.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="D:/GitHub/minisketch/CMakeLists.txt">
+		<Unit filename="/home/saber/GitHub/forked-minisketch/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

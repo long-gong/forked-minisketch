@@ -1,4 +1,22 @@
-"C:\Program Files\JetBrains\CLion 2019.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" D:\GitHub\minisketch
+/usr/local/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/saber/GitHub/forked-minisketch
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for 4 include files stdlib.h, ..., float.h
+-- Looking for 4 include files stdlib.h, ..., float.h - found
+-- Looking for include file header
+-- Looking for include file header - not found
 -- checking for sys/type.h ...
 -- checking for stdlib.h ...
 -- checking for string.h ...
@@ -10,4 +28,4 @@
 -- checking for dlfcn.h ...
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/GitHub/minisketch/cmake-build-debug
+-- Build files have been written to: /home/saber/GitHub/forked-minisketch/cmake-build-debug

@@ -158,11 +158,11 @@ void TestRand(int bits, int impl, int count, int iter) {
 
 int main(void) {
     for (int j = 2; j <= 64; j += 1) {
-        fprintf(stderr, "%i random tests with %i bits:\n", 500 / j, j);
+        fprintf(stderr, "%i random test with %i bits:\n", 500 / j, j);
         TestRand(j, 0, 150, 500 / j);
         TestRand(j, 1, 150, 500 / j);
         TestRand(j, 2, 150, 500 / j);
-        fprintf(stderr, "%i random tests with %i bits: done\n", 500 / j, j);
+        fprintf(stderr, "%i random test with %i bits: done\n", 500 / j, j);
     }
 
     int counts[65] = {0};

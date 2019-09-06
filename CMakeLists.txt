@@ -30,7 +30,7 @@ endmacro()
 check_include_files("stdlib.h;stdarg.h;string.h;float.h" STDC_HEADERS)
 if (STDC_HEADERS)
     add_definitions(-DSTDC_HEADERS=1)
-endif()
+endif ()
 CHECK_HEADER_MARK_IF_EXISTS("sys/type.h" HAVE_SYS_TYPES_H)
 CHECK_HEADER_MARK_IF_EXISTS("stdlib.h" HAVE_STDLIB_H)
 CHECK_HEADER_MARK_IF_EXISTS("string.h" HAVE_STRING_H)
@@ -73,6 +73,12 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/incl
 
 add_library(minisketch ${SRCs})
 
+
+# Example
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/example)
+
+# Test
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test)
 
 # Installation configuration
 install(

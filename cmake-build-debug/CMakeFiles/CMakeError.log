@@ -1,16 +1,18 @@
 Determining if files header exist failed with the following output:
-Change Dir: D:/GitHub/minisketch/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/saber/GitHub/forked-minisketch/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_4fc0c\fast 
-	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX64\x64\nmake.exe" -f CMakeFiles\cmTC_4fc0c.dir\build.make /nologo -L                  CMakeFiles\cmTC_4fc0c.dir\build
-Building C object CMakeFiles/cmTC_4fc0c.dir/RESULT.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\cl.exe @C:\Users\saber\AppData\Local\Temp\nm7D82.tmp
-RESULT.c
-D:\GitHub\minisketch\cmake-build-debug\CMakeFiles\CheckIncludeFiles\RESULT.c(2): fatal error C1083: Cannot open include file: 'header': No such file or directory
-NMAKE : fatal error U1077: 'C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1422~1.279\bin\Hostx64\x64\cl.exe' : return code '0x2'
-Stop.
-NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX64\x64\nmake.exe"' : return code '0x2'
-Stop.
+Run Build Command(s):/usr/bin/make cmTC_e7bd3/fast 
+/usr/bin/make -f CMakeFiles/cmTC_e7bd3.dir/build.make CMakeFiles/cmTC_e7bd3.dir/build
+make[1]: Entering directory '/home/saber/GitHub/forked-minisketch/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7bd3.dir/RESULT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e7bd3.dir/RESULT.c.o   -c /home/saber/GitHub/forked-minisketch/cmake-build-debug/CMakeFiles/CheckIncludeFiles/RESULT.c
+/home/saber/GitHub/forked-minisketch/cmake-build-debug/CMakeFiles/CheckIncludeFiles/RESULT.c:2:10: fatal error: header: No such file or directory
+ #include <header>
+          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_e7bd3.dir/build.make:66: CMakeFiles/cmTC_e7bd3.dir/RESULT.c.o] Error 1
+make[1]: Leaving directory '/home/saber/GitHub/forked-minisketch/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e7bd3/fast] Error 2
 
 Source:
 /* */
