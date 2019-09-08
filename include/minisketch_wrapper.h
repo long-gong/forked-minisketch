@@ -1,13 +1,15 @@
+
 #ifndef _MINISKETCH_WRAPPER_H_
 #define _MINISKETCH_WRAPPER_H_
 
 #include "minisketch.h"
-#if defined(USE_SPDLOG)
+#ifdef USE_SPDLOG
 #include <spdlog/spdlog.h>
 #endif
 
 #include <memory>
 #include <stdexcept>
+#include <unordered_set>
 #include <vector>
 
 #if __cplusplus == 201703L
@@ -20,8 +22,6 @@
 
 namespace {
 constexpr auto MINI_SKETCH_IMPL = 0;
-} // namespace
-
 struct MiniSketchDeleter { // deleter
   void operator()(minisketch *sketch) const {
 #if defined(USE_SPDLOG)
@@ -31,46 +31,51 @@ struct MiniSketchDeleter { // deleter
     minisketch_destroy(sketch);
   };
 };
+} // namespace
 
 namespace minisketch_wrapper {
 struct MiniSketch {
   using element_t = uint32_t;
   using ustring_t = std::basic_string<unsigned char>;
+  using minisketch_ptr = std::unique_ptr<minisketch, MiniSketchDeleter>;
 
   // create an empty minisketch
   MiniSketch(unsigned m, unsigned t)
       : m_(m), t_(t), sketch_(minisketch_create(m, MINI_SKETCH_IMPL, t),
                               MiniSketchDeleter()) {}
 
+  // creat a minisketch from a serialized string
   static MiniSketch deserialize_from(unsigned m, unsigned t,
                                      const ustring_t &buffer) {
-    std::unique_ptr<minisketch, MiniSketchDeleter> sketch(
-        minisketch_create(m, MINI_SKETCH_IMPL, t), MiniSketchDeleter());
+    minisketch_ptr sketch(minisketch_create(m, MINI_SKETCH_IMPL, t),
+                          MiniSketchDeleter());
     minisketch_deserialize(sketch.get(), &buffer[0]);
     return MiniSketch(m, t, std::move(sketch));
   }
 
   size_t num_bits() const { return m_; }
+
+  // maximum of errors can be corrected
   size_t capacity() const { return t_; }
 
   // preferred
+  // XOR with another minisketch
   MiniSketch &operator^=(const MiniSketch &other) { return merge_with(other); }
 
   MiniSketch operator^(const MiniSketch &other) {
-    std::unique_ptr<minisketch, MiniSketchDeleter> merged(
-        minisketch_clone(sketch_.get()));
+    minisketch_ptr merged(minisketch_clone(sketch_.get()));
     minisketch_merge(merged.get(), other.get_sketch().get());
     return MiniSketch(m_, t_, std::move(merged));
   }
 
   MiniSketch &merge_with(const MiniSketch &other) {
+    assert(other.num_bits() == num_bits());
+    assert(other.capacity() == capacity());
     minisketch_merge(sketch_.get(), other.get_sketch().get());
     return *this;
   }
 
-  const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch() const {
-    return sketch_;
-  }
+  const minisketch_ptr &get_sketch() const { return sketch_; }
 
   ustring_t serialize() const {
     size_t sersize = minisketch_serialized_size(sketch_.get());
@@ -83,6 +88,12 @@ struct MiniSketch {
   void add(element_t s) { minisketch_add_uint64(sketch_.get(), s); }
 
   void encode(const std::vector<element_t> &S) {
+    for (auto s : S) {
+      add(s);
+    }
+  }
+
+  void encode(const std::unordered_set<element_t> &S) {
     for (auto s : S) {
       add(s);
     }
@@ -111,15 +122,14 @@ struct MiniSketch {
   }
 
 protected:
-  MiniSketch(unsigned m, unsigned t,
-             std::unique_ptr<minisketch, MiniSketchDeleter> init)
+  MiniSketch(unsigned m, unsigned t, minisketch_ptr init)
       : m_(m), t_(t), sketch_(std::move(init)) {}
 
 private:
   unsigned m_; // # of bits
   unsigned t_; // capacity
 
-  std::unique_ptr<minisketch, MiniSketchDeleter> sketch_;
+  minisketch_ptr sketch_;
 };
 } // namespace minisketch_wrapper
 
@@ -165,13 +175,6 @@ struct MiniSketch {
                         differences.end());
     }
     return differences;
-
-    //    std::vector<element_t > diff;
-    //    diff.reserve(num_differences);
-    //    for(size_t i = 0;i < num_differences;++ i) {
-    //      diff.push_back(differences[i]);
-    //    }
-    //    return diff;
   }
 
 private:

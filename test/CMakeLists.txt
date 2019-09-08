@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(minisketch_tests)
 
-#set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
 enable_testing()
 
 find_path(SPDLOG_INCLUDE_DIR spdlog/spdlog.h)

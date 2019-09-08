@@ -21,9 +21,11 @@ spdlog/spdlog.h
 -
 memory
 -
-vector
--
 stdexcept
+-
+unordered_set
+-
+vector
 -
 optional
 -
