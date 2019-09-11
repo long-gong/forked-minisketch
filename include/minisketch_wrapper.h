@@ -62,7 +62,7 @@ struct MiniSketch {
   // XOR with another minisketch
   MiniSketch &operator^=(const MiniSketch &other) { return merge_with(other); }
 
-  MiniSketch operator^(const MiniSketch &other) {
+  MiniSketch operator^(const MiniSketch &other) const {
     minisketch_ptr merged(minisketch_clone(sketch_.get()));
     minisketch_merge(merged.get(), other.get_sketch().get());
     return MiniSketch(m_, t_, std::move(merged));
@@ -100,6 +100,28 @@ struct MiniSketch {
   }
 
 #ifdef USE_CXX17
+  std::optional<std::vector<uint32_t>> decode32() {
+#else
+  std::vector<uint32_t> decode32() {
+#endif
+    std::vector<uint64_t> differences(t_, 0);
+    ssize_t num_differences =
+        minisketch_decode(sketch_.get(), t_, &differences[0]);
+    if (num_differences < 0) {
+#ifdef USE_CXX17
+      return std::nullopt;
+#else
+      throw std::runtime_error("Unable to decode");
+#endif
+    }
+    if (num_differences < t_) {
+      differences.erase(differences.begin() + num_differences,
+                        differences.end());
+    }
+    return to32(differences);
+  }
+
+#ifdef USE_CXX17
   std::optional<std::vector<uint64_t>> decode() {
 #else
   std::vector<uint64_t> decode() {
@@ -121,11 +143,28 @@ struct MiniSketch {
     return differences;
   }
 
+  // Copy not allowed
+  MiniSketch(const MiniSketch &other) = delete;
+  // Move allowed
+  MiniSketch(MiniSketch &&other) noexcept
+      : m_(other.m_), t_(other.t_), sketch_(std::move(other.sketch_)) {}
+
 protected:
   MiniSketch(unsigned m, unsigned t, minisketch_ptr init)
       : m_(m), t_(t), sketch_(std::move(init)) {}
 
 private:
+  static std::vector<uint32_t> to32(const std::vector<uint64_t> &vec64) {
+    std::vector<uint32_t> vec32;
+    vec32.reserve(vec64.size());
+    for (auto v : vec64) {
+      if (v > std::numeric_limits<uint32_t>::max()) {
+        std::cerr << "to32: Value overflow \n";
+      }
+      vec32.push_back(v);
+    }
+    return vec32;
+  }
   unsigned m_; // # of bits
   unsigned t_; // capacity
 

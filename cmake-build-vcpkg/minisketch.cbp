@@ -5,41 +5,41 @@
 		<Option title="minisketch"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\vcpkg\;CMake Files\..\..\..\..\usr\local\vcpkg\scripts\;CMake Files\..\..\..\..\usr\local\vcpkg\scripts\buildsystems\;CMake Files\example\;CMake Files\test\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\vcpkg\;CMake Files\..\..\..\usr\local\vcpkg\scripts\;CMake Files\..\..\..\usr\local\vcpkg\scripts\buildsystems\;CMake Files\example\;CMake Files\test\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -54,27 +54,27 @@
 					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 minisketch"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 minisketch"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch/fast">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -89,67 +89,67 @@
 					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 minisketch/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 minisketch/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch_example">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/minisketch_example" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/minisketch_example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -164,27 +164,27 @@
 					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 minisketch_example"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 minisketch_example"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch_example/fast">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/minisketch_example" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/minisketch_example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -199,27 +199,27 @@
 					<Add option="-DVERSION=&quot;0.0.1&quot;"/>
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 minisketch_example/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 minisketch_example/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch_test">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/minisketch_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/minisketch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -235,28 +235,28 @@
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
 					<Add option="-DUSE_SPDLOG"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
 					<Add directory="/usr/local/vcpkg/installed/x64-linux/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 minisketch_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 minisketch_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minisketch_test/fast">
-				<Option output="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/minisketch_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test"/>
+				<Option output="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/minisketch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -272,93 +272,93 @@
 					<Add option="-DSTDC_HEADERS=1"/>
 					<Add option="-DHAVE_CXX11=1"/>
 					<Add option="-DUSE_SPDLOG"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch"/>
-					<Add directory="/home/saber/GitHub/forked-minisketch/include"/>
+					<Add directory="/Data/GitHub/forked-minisketch"/>
+					<Add directory="/Data/GitHub/forked-minisketch/include"/>
 					<Add directory="/usr/local/vcpkg/installed/x64-linux/include"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 minisketch_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 minisketch_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/example/example.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/example/example.cpp">
 			<Option target="minisketch_example"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_1byte.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_1byte.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_2bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_2bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_3bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_3bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_4bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_4bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_5bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_5bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_6bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_6bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_7bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_7bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/clmul_8bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/clmul_8bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_1byte.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_1byte.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_2bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_2bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_3bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_3bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_4bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_4bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_5bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_5bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_6bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_6bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_7bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_7bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/fields/generic_8bytes.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/fields/generic_8bytes.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/src/minisketch.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/src/minisketch.cpp">
 			<Option target="minisketch"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/test/minisketch_test.cpp">
+		<Unit filename="/Data/GitHub/forked-minisketch/test/minisketch_test.cpp">
 			<Option target="minisketch_test"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/CMakeLists.txt">
+		<Unit filename="/Data/GitHub/forked-minisketch/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/../../../../usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\vcpkg\scripts\buildsystems\"/>
+		<Unit filename="/Data/GitHub/forked-minisketch/../../../usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\vcpkg\scripts\buildsystems\"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/example/CMakeLists.txt">
+		<Unit filename="/Data/GitHub/forked-minisketch/example/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\example\"/>
 		</Unit>
-		<Unit filename="/home/saber/GitHub/forked-minisketch/test/CMakeLists.txt">
+		<Unit filename="/Data/GitHub/forked-minisketch/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
 	</Project>

@@ -1,4 +1,4 @@
-# Install script for directory: /home/saber/GitHub/forked-minisketch/test
+# Install script for directory: /Data/GitHub/forked-minisketch/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

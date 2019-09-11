@@ -1,4 +1,4 @@
-# Install script for directory: /home/saber/GitHub/forked-minisketch
+# Install script for directory: /Data/GitHub/forked-minisketch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,22 +38,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Data/GitHub/forked-minisketch/cmake-build-vcpkg/libminisketch.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-      "/home/saber/GitHub/forked-minisketch/include/minisketch.h"
-      "/home/saber/GitHub/forked-minisketch/include/minisketch_wrapper.h"
+      "/Data/GitHub/forked-minisketch/include/minisketch.h"
+      "/Data/GitHub/forked-minisketch/include/minisketch_wrapper.h"
       )
   endif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/cmake_install.cmake")
-  include("/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test/cmake_install.cmake")
+  include("/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/cmake_install.cmake")
+  include("/Data/GitHub/forked-minisketch/cmake-build-vcpkg/test/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Data/GitHub/forked-minisketch/cmake-build-vcpkg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -6,5 +6,5 @@ CXX_FLAGS =  -mpclmul -g   -std=gnu++11
 
 CXX_DEFINES = -DHAVE_CXX11=1 -DPACKAGE=\"minisketch\" -DPACKAGE_BUGREPORT=\"http://github.com/sipa/minisketch/\" -DPACKAGE_NAME=\"minisketch\" -DPACKAGE_STRING="\"minisketch 0.0.1\"" -DPACKAGE_TARNAME=\"minisketch\" -DPACKAGE_URL=\"\" -DPACKAGE_VERSION=\"0.0.1\" -DSTDC_HEADERS=1 -DVERSION=\"0.0.1\"
 
-CXX_INCLUDES = -I/home/saber/GitHub/forked-minisketch -I/home/saber/GitHub/forked-minisketch/include 
+CXX_INCLUDES = -I/Data/GitHub/forked-minisketch -I/Data/GitHub/forked-minisketch/include 
 

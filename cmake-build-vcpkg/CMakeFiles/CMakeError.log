@@ -1,18 +1,20 @@
 Determining if files header exist failed with the following output:
-Change Dir: /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
+Change Dir: /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bce39/fast 
-/usr/bin/make -f CMakeFiles/cmTC_bce39.dir/build.make CMakeFiles/cmTC_bce39.dir/build
-make[1]: Entering directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bce39.dir/RESULT.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_bce39.dir/RESULT.c.o   -c /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CheckIncludeFiles/RESULT.c
-/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CheckIncludeFiles/RESULT.c:2:10: fatal error: header: No such file or directory
+Run Build Command(s):/usr/bin/make cmTC_64dcd/fast 
+/usr/bin/make -f CMakeFiles/cmTC_64dcd.dir/build.make CMakeFiles/cmTC_64dcd.dir/build
+make[1]: Entering directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64dcd.dir/RESULT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_64dcd.dir/RESULT.c.o   -c /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CheckIncludeFiles/RESULT.c
+/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CheckIncludeFiles/RESULT.c:2:10: fatal error: header: No such file or directory
  #include <header>
           ^~~~~~~~
 compilation terminated.
-make[1]: *** [CMakeFiles/cmTC_bce39.dir/build.make:66: CMakeFiles/cmTC_bce39.dir/RESULT.c.o] Error 1
-make[1]: Leaving directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_bce39/fast] Error 2
+CMakeFiles/cmTC_64dcd.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_64dcd.dir/RESULT.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_64dcd.dir/RESULT.c.o] Error 1
+make[1]: Leaving directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_64dcd/fast' failed
+make: *** [cmTC_64dcd/fast] Error 2
 
 Source:
 /* */
@@ -22,24 +24,26 @@ Source:
 int main(void){return 0;}
 
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
+Change Dir: /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_56afd/fast 
-/usr/bin/make -f CMakeFiles/cmTC_56afd.dir/build.make CMakeFiles/cmTC_56afd.dir/build
-make[1]: Entering directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_56afd.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_56afd.dir/CheckSymbolExists.c.o   -c /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_56afd
-/usr/local/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56afd.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_56afd.dir/CheckSymbolExists.c.o  -o cmTC_56afd 
-/usr/bin/ld: CMakeFiles/cmTC_56afd.dir/CheckSymbolExists.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_948bc/fast 
+/usr/bin/make -f CMakeFiles/cmTC_948bc.dir/build.make CMakeFiles/cmTC_948bc.dir/build
+make[1]: Entering directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_948bc.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_948bc.dir/CheckSymbolExists.c.o   -c /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_948bc
+/snap/clion/82/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_948bc.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_948bc.dir/CheckSymbolExists.c.o  -o cmTC_948bc 
+CMakeFiles/cmTC_948bc.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_56afd.dir/build.make:87: cmTC_56afd] Error 1
-make[1]: Leaving directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_56afd/fast] Error 2
+CMakeFiles/cmTC_948bc.dir/build.make:86: recipe for target 'cmTC_948bc' failed
+make[1]: *** [cmTC_948bc] Error 1
+make[1]: Leaving directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_948bc/fast' failed
+make: *** [cmTC_948bc/fast] Error 2
 
-File /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -55,20 +59,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
+Change Dir: /Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3d596/fast 
-/usr/bin/make -f CMakeFiles/cmTC_3d596.dir/build.make CMakeFiles/cmTC_3d596.dir/build
-make[1]: Entering directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3d596.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3d596.dir/CheckFunctionExists.c.o   -c /usr/local/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3d596
-/usr/local/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d596.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3d596.dir/CheckFunctionExists.c.o  -o cmTC_3d596 -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_2bac7/fast 
+/usr/bin/make -f CMakeFiles/cmTC_2bac7.dir/build.make CMakeFiles/cmTC_2bac7.dir/build
+make[1]: Entering directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bac7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2bac7.dir/CheckFunctionExists.c.o   -c /snap/clion/82/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2bac7
+/snap/clion/82/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bac7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2bac7.dir/CheckFunctionExists.c.o  -o cmTC_2bac7 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_3d596.dir/build.make:87: cmTC_3d596] Error 1
-make[1]: Leaving directory '/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_3d596/fast] Error 2
+CMakeFiles/cmTC_2bac7.dir/build.make:86: recipe for target 'cmTC_2bac7' failed
+make[1]: *** [cmTC_2bac7] Error 1
+make[1]: Leaving directory '/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_2bac7/fast' failed
+make: *** [cmTC_2bac7/fast] Error 2
 
 

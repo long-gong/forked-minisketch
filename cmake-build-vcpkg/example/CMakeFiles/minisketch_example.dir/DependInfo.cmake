@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/saber/GitHub/forked-minisketch/example/example.cpp" "/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/example/CMakeFiles/minisketch_example.dir/example.cpp.o"
+  "/Data/GitHub/forked-minisketch/example/example.cpp" "/Data/GitHub/forked-minisketch/cmake-build-vcpkg/example/CMakeFiles/minisketch_example.dir/example.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,7 +30,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/minisketch.dir/DependInfo.cmake"
+  "/Data/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles/minisketch.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
