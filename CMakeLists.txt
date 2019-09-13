@@ -70,6 +70,7 @@ install(
         TARGETS minisketch
         EXPORT minisketch
         LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
 )
 
 install(

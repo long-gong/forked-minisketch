@@ -8,9 +8,9 @@ enable_testing()
 find_path(SPDLOG_INCLUDE_DIR spdlog/spdlog.h)
 find_library(FMT_LIBRARY fmt)
 add_definitions(-DUSE_SPDLOG)
-find_package(GTest MODULE REQUIRED)
-set(GTEST_LIBRARIES GTest::GTest GTest::Main)
-find_library(GMOCK_LIBRARY gmock)
+find_package(GTest CONFIG REQUIRED)
+set(GTEST_LIBRARIES GTest::gtest GTest::gtest_main)
+find_library(GMOCK_LIBRARY GTest::gmock)
 
 include_directories(${SPDLOG_INCLUDE_DIR})
 

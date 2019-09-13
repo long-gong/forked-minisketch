@@ -88,7 +88,7 @@ struct MiniSketch {
 
   void add(element_t s) { minisketch_add_uint64(sketch_.get(), s); }
 
-  void add(uint32_t s) { minisketch_add_uint64(sketch_.get(), s); }
+  // void add(uint32_t s) { minisketch_add_uint64(sketch_.get(), s); }
 
   void encode(const std::vector<element_t> &S) {
     for (auto s : S) {
@@ -108,7 +108,7 @@ struct MiniSketch {
     }
   }
 
-    void encode(const std::unordered_set<uint32_t> &S) {
+  void encode(const std::unordered_set<uint32_t> &S) {
     for (auto s : S) {
       add(s);
     }
@@ -196,10 +196,12 @@ private:
 //                   MiniSketchDeleter()) {}
 //   size_t num_bits() const { return m_; }
 //   size_t capacity() const { return t_; }
-//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_a() const {
+//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_a() const
+//   {
 //     return sketch_a_;
 //   }
-//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_b() const {
+//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_b() const
+//   {
 //     return sketch_b_;
 //   }
 //   void encode_a(const std::vector<element_t> &A) { _encode(A, sketch_a_); }
@@ -210,8 +212,10 @@ private:
 // #else
 //   std::vector<uint64_t> decode() {
 // #endif
-//     // Merge the elements from sketch_a into sketch_b. The result is a sketch_b
-//     // which contains all elements that occurred in Alice's or Bob's sets, but
+//     // Merge the elements from sketch_a into sketch_b. The result is a
+//     sketch_b
+//     // which contains all elements that occurred in Alice's or Bob's sets,
+//     but
 //     // not in both.
 //     minisketch_merge(sketch_b_.get(), sketch_a_.get());
 //     std::vector<uint64_t> differences(t_, 0);
@@ -233,7 +237,8 @@ private:
 
 // private:
 //   static void _encode(const std::vector<element_t> &S,
-//                       std::unique_ptr<minisketch, MiniSketchDeleter> &sketch) {
+//                       std::unique_ptr<minisketch, MiniSketchDeleter> &sketch)
+//                       {
 //     for (auto s : S) {
 //       minisketch_add_uint64(sketch.get(), s);
 //     }
