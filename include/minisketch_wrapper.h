@@ -36,7 +36,7 @@ struct MiniSketchDeleter { // deleter
 
 namespace minisketch_wrapper {
 struct MiniSketch {
-  using element_t = uint32_t;
+  using element_t = uint64_t;
   using ustring_t = std::basic_string<unsigned char>;
   using minisketch_ptr = std::unique_ptr<minisketch, MiniSketchDeleter>;
 
@@ -63,7 +63,7 @@ struct MiniSketch {
   // XOR with another minisketch
   MiniSketch &operator^=(const MiniSketch &other) { return merge_with(other); }
 
-  MiniSketch operator^(const MiniSketch &other) {
+  MiniSketch operator^(const MiniSketch &other) const {
     minisketch_ptr merged(minisketch_clone(sketch_.get()));
     minisketch_merge(merged.get(), other.get_sketch().get());
     return MiniSketch(m_, t_, std::move(merged));
@@ -88,7 +88,15 @@ struct MiniSketch {
 
   void add(element_t s) { minisketch_add_uint64(sketch_.get(), s); }
 
+  void add(uint32_t s) { minisketch_add_uint64(sketch_.get(), s); }
+
   void encode(const std::vector<element_t> &S) {
+    for (auto s : S) {
+      add(s);
+    }
+  }
+
+  void encode(const std::vector<uint32_t> &S) {
     for (auto s : S) {
       add(s);
     }
@@ -98,6 +106,34 @@ struct MiniSketch {
     for (auto s : S) {
       add(s);
     }
+  }
+
+    void encode(const std::unordered_set<uint32_t> &S) {
+    for (auto s : S) {
+      add(s);
+    }
+  }
+
+#ifdef USE_CXX17
+  std::optional<std::vector<uint32_t>> decode32() {
+#else
+  std::vector<uint32_t> decode32() {
+#endif
+    std::vector<uint64_t> differences(t_, 0);
+    ssize_t num_differences =
+        minisketch_decode(sketch_.get(), t_, &differences[0]);
+    if (num_differences < 0) {
+#ifdef USE_CXX17
+      return std::nullopt;
+#else
+      throw std::runtime_error("Unable to decode");
+#endif
+    }
+    if (num_differences < t_) {
+      differences.erase(differences.begin() + num_differences,
+                        differences.end());
+    }
+    return to32(differences);
   }
 
 #ifdef USE_CXX17
@@ -122,11 +158,28 @@ struct MiniSketch {
     return differences;
   }
 
+  // Copy not allowed
+  MiniSketch(const MiniSketch &other) = delete;
+  // Move allowed
+  MiniSketch(MiniSketch &&other) noexcept
+      : m_(other.m_), t_(other.t_), sketch_(std::move(other.sketch_)) {}
+
 protected:
   MiniSketch(unsigned m, unsigned t, minisketch_ptr init)
       : m_(m), t_(t), sketch_(std::move(init)) {}
 
 private:
+  static std::vector<uint32_t> to32(const std::vector<uint64_t> &vec64) {
+    std::vector<uint32_t> vec32;
+    vec32.reserve(vec64.size());
+    for (auto v : vec64) {
+      if (v > std::numeric_limits<uint32_t>::max()) {
+        throw std::runtime_error("value overflow");
+      }
+      vec32.push_back(v);
+    }
+    return vec32;
+  }
   unsigned m_; // # of bits
   unsigned t_; // capacity
 
@@ -134,62 +187,62 @@ private:
 };
 } // namespace minisketch_wrapper
 
-struct MiniSketch {
-  using element_t = uint32_t;
-  MiniSketch(unsigned m, unsigned t)
-      : m_(m), t_(t), sketch_a_(minisketch_create(m, MINI_SKETCH_IMPL, t),
-                                MiniSketchDeleter()),
-        sketch_b_(minisketch_create(m, MINI_SKETCH_IMPL, t),
-                  MiniSketchDeleter()) {}
-  size_t num_bits() const { return m_; }
-  size_t capacity() const { return t_; }
-  const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_a() const {
-    return sketch_a_;
-  }
-  const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_b() const {
-    return sketch_b_;
-  }
-  void encode_a(const std::vector<element_t> &A) { _encode(A, sketch_a_); }
-  void encode_b(const std::vector<element_t> &B) { _encode(B, sketch_b_); }
+// struct MiniSketch {
+//   using element_t = uint32_t;
+//   MiniSketch(unsigned m, unsigned t)
+//       : m_(m), t_(t), sketch_a_(minisketch_create(m, MINI_SKETCH_IMPL, t),
+//                                 MiniSketchDeleter()),
+//         sketch_b_(minisketch_create(m, MINI_SKETCH_IMPL, t),
+//                   MiniSketchDeleter()) {}
+//   size_t num_bits() const { return m_; }
+//   size_t capacity() const { return t_; }
+//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_a() const {
+//     return sketch_a_;
+//   }
+//   const std::unique_ptr<minisketch, MiniSketchDeleter> &get_sketch_b() const {
+//     return sketch_b_;
+//   }
+//   void encode_a(const std::vector<element_t> &A) { _encode(A, sketch_a_); }
+//   void encode_b(const std::vector<element_t> &B) { _encode(B, sketch_b_); }
 
-#ifdef USE_CXX17
-  std::optional<std::vector<uint64_t>> decode() {
-#else
-  std::vector<uint64_t> decode() {
-#endif
-    // Merge the elements from sketch_a into sketch_b. The result is a sketch_b
-    // which contains all elements that occurred in Alice's or Bob's sets, but
-    // not in both.
-    minisketch_merge(sketch_b_.get(), sketch_a_.get());
-    std::vector<uint64_t> differences(t_, 0);
-    ssize_t num_differences =
-        minisketch_decode(sketch_b_.get(), t_, &differences[0]);
-    if (num_differences < 0) {
-#ifdef USE_CXX17
-      return std::nullopt;
-#else
-      throw std::runtime_error("Unable to decode");
-#endif
-    }
-    if (num_differences < t_) {
-      differences.erase(differences.begin() + num_differences,
-                        differences.end());
-    }
-    return differences;
-  }
+// #ifdef USE_CXX17
+//   std::optional<std::vector<uint64_t>> decode() {
+// #else
+//   std::vector<uint64_t> decode() {
+// #endif
+//     // Merge the elements from sketch_a into sketch_b. The result is a sketch_b
+//     // which contains all elements that occurred in Alice's or Bob's sets, but
+//     // not in both.
+//     minisketch_merge(sketch_b_.get(), sketch_a_.get());
+//     std::vector<uint64_t> differences(t_, 0);
+//     ssize_t num_differences =
+//         minisketch_decode(sketch_b_.get(), t_, &differences[0]);
+//     if (num_differences < 0) {
+// #ifdef USE_CXX17
+//       return std::nullopt;
+// #else
+//       throw std::runtime_error("Unable to decode");
+// #endif
+//     }
+//     if (num_differences < t_) {
+//       differences.erase(differences.begin() + num_differences,
+//                         differences.end());
+//     }
+//     return differences;
+//   }
 
-private:
-  static void _encode(const std::vector<element_t> &S,
-                      std::unique_ptr<minisketch, MiniSketchDeleter> &sketch) {
-    for (auto s : S) {
-      minisketch_add_uint64(sketch.get(), s);
-    }
-  }
+// private:
+//   static void _encode(const std::vector<element_t> &S,
+//                       std::unique_ptr<minisketch, MiniSketchDeleter> &sketch) {
+//     for (auto s : S) {
+//       minisketch_add_uint64(sketch.get(), s);
+//     }
+//   }
 
-  unsigned m_; // # of bits
-  unsigned t_; // capacity
+//   unsigned m_; // # of bits
+//   unsigned t_; // capacity
 
-  std::unique_ptr<minisketch, MiniSketchDeleter> sketch_a_;
-  std::unique_ptr<minisketch, MiniSketchDeleter> sketch_b_;
-};
+//   std::unique_ptr<minisketch, MiniSketchDeleter> sketch_a_;
+//   std::unique_ptr<minisketch, MiniSketchDeleter> sketch_b_;
+// };
 #endif // _MINISKETCH_WRAPPER_H_

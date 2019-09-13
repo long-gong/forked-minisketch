@@ -1,1 +1,0 @@
-/usr/bin/c++   -mpclmul -g  -rdynamic CMakeFiles/minisketch_example.dir/example.cpp.o  -o minisketch_example ../libminisketch.a 
