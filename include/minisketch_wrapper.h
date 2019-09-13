@@ -7,6 +7,7 @@
 #include <spdlog/spdlog.h>
 #endif
 
+#include <cassert>
 #include <memory>
 #include <stdexcept>
 #include <unordered_set>

@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/clion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/83/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/83/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -81,10 +81,9 @@ test/minisketch_test: test/CMakeFiles/minisketch_test.dir/minisketch_test.cpp.o
 test/minisketch_test: test/CMakeFiles/minisketch_test.dir/build.make
 test/minisketch_test: libminisketch.a
 test/minisketch_test: /usr/local/vcpkg/installed/x64-linux/debug/lib/libgtestd.a
-test/minisketch_test: /usr/local/vcpkg/installed/x64-linux/debug/lib/libgtest_maind.a
+test/minisketch_test: GTest::Main-NOTFOUND
 test/minisketch_test: /usr/local/vcpkg/installed/x64-linux/lib/libgmock.a
 test/minisketch_test: /usr/local/vcpkg/installed/x64-linux/lib/libfmt.a
-test/minisketch_test: /usr/local/vcpkg/installed/x64-linux/debug/lib/libgtestd.a
 test/minisketch_test: test/CMakeFiles/minisketch_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable minisketch_test"
 	cd /home/saber/GitHub/forked-minisketch/cmake-build-vcpkg/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minisketch_test.dir/link.txt --verbose=$(VERBOSE)
